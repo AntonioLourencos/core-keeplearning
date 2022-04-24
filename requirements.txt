@@ -1,0 +1,5 @@
+uvicorn
+fastapi
+gspread
+oauth2client
+datetime
