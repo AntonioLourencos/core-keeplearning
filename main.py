@@ -5,8 +5,13 @@ from src.services.sheets import Sheets
 app = FastAPI()
 
 
+@app.get("/")
+async def rootGet():
+    return {"status": "sucess", 'message': "API funcionando!"}
+
+
 @app.post("/")
-async def root(data: User):
+async def rootPost(data: User):
     serviceSheets = Sheets()
     responseServiceSheets = serviceSheets.register(data)
 
